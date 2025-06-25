@@ -16,7 +16,7 @@ def main():
      На выходе создаётся новый видеоролик rep_result.mp4"""
 
     path = 'crowd.mp4'
-    model = YOLO('yolov8n.pt')
+    model = YOLO('yolov8x.pt')
     dict_classes = model.model.names
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') 
 
@@ -117,9 +117,8 @@ def main():
                                    fps, (width, height))
 
     # Основной цикл обработки
-    # for i in tqdm(range(int(video.get(cv2.CAP_PROP_FRAME_COUNT)))):
-    for i in tqdm(range(int(5 * fps))):
-
+    for i in tqdm(range(int(video.get(cv2.CAP_PROP_FRAME_COUNT)))):
+        
         # Захват кадра
         _, frame = video.read()
 
