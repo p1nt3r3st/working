@@ -20,7 +20,11 @@
     Для Windows: https://selectel.ru/blog/tutorials/docker-desktop-windows/;
     Для Linux: https://timeweb.com/ru/community/articles/kak-ustanovit-docker-na-ubuntu-22-04;
     Для MacOS: https://habr.com/ru/companies/evrone/articles/716630/.
-
+### 0.1. Создайте папку для проекта.
+```
+mkdir mywork
+cd mywork
+```
 ### 1. Клонирование репозитория
 ```
 git clone https://github.com/p1nt3r3st/working.git
