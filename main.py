@@ -114,7 +114,8 @@ def main():
                                    fps, (width, height))
 
     # Основной цикл обработки
-    for i in tqdm(range(int(video.get(cv2.CAP_PROP_FRAME_COUNT)))):
+    # for i in tqdm(range(int(video.get(cv2.CAP_PROP_FRAME_COUNT)))):
+    for i in tqdm(range(int(5 * fps))):
 
         # Захват кадра
         _, frame = video.read()
