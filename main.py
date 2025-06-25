@@ -108,6 +108,9 @@ def main():
     output_path = "rep_" + video_name  # Путь для результата
     tmp_output_path = "tmp_" + output_path  # Временный файл
     VIDEO_CODEC = "MP4V"  # Кодек для записи
+    output_path = '/app/output/' + output_path
+    tmp_output_path = '/app/output/' + tmp_output_path
+    
 
     output_video = cv2.VideoWriter(tmp_output_path,
                                    cv2.VideoWriter_fourcc(*VIDEO_CODEC),
