@@ -29,12 +29,21 @@ git clone https://github.com/p1nt3r3st/working.git
  ```
  cd working
  ```
- ### 3. Билдим проект
+ ### 3. Создадим папку, в которой сохранится готовый видеоролик
+ ```
+ mkdir output
+ ```
+  ### 4. Билдим проект
  ```
  docker build -t mynn .
  ```
- ### 4. Запускаем контейнер
+ ### 5. Запускаем контейнер
  ```
- docker run -it --rm mynn
+ docker run -it --rm -v "$(pwd)/output:/app/output" mynn
  ```
  --rm -  автоматически удаляет контейнер после завершения
+### 6. Переходим в папку output
+```
+cd output
+```
+В папке должен находится готовый видеоролик rep_result.mp4 с bounding box для людей.
