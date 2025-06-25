@@ -16,7 +16,7 @@ def main():
      На выходе создаётся новый видеоролик rep_result.mp4"""
 
     path = 'crowd.mp4'
-    model = YOLO('yolov8x.pt')
+    model = YOLO('yolov8n.pt')
     dict_classes = model.model.names
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu') 
 
